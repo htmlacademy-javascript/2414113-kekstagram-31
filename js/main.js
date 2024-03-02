@@ -35,7 +35,7 @@ const MAX_LIKES = 200;
 
 const MIN_COMMENTS = 0;
 const MAX_COMMENTS = 30;
-const LENGTH_PHOTO = 25;
+const QUANTITY_OBJECTS = 25;
 
 function getRandomInteger(min, max) {
   const lower = Math.ceil(Math.min(Math.abs(min), Math.abs(max)));
@@ -83,7 +83,7 @@ function getPhoto() {
   };
 }
 
-const arrayPhotos = () => Array.from({ length: LENGTH_PHOTO }, getPhoto);
+const arrayPhotos = () => Array.from({ length: QUANTITY_OBJECTS }, getPhoto);
 
 arrayPhotos();
 // console.log(arrayPhotos());
