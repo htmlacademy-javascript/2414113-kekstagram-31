@@ -2,9 +2,8 @@
 function checkLengthOfString(string, length) {
   if (string.length <= length) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Строка короче 20 символов
@@ -16,23 +15,22 @@ checkLengthOfString('проверяемая строка', 10); // false
 
 
 // Является ли строка палиндромом
-function palindrome(string) {
-  const resetString = string.replaceAll(' ', '').toLowerCase();
+function isPalindrome(string) {
+  const normalizeString = string.replaceAll(' ', '').toLowerCase();
   let newString = '';
-  for (let i = resetString.length - 1; i >= 0; i--) {
-    newString += resetString[i];
+  for (let i = normalizeString.length - 1; i >= 0; i--) {
+    newString += normalizeString[i];
   }
-  if (newString === resetString) {
+  if (newString === normalizeString) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Строка является палиндромом
-palindrome('топот'); // true
+isPalindrome('топот'); // true
 // Несмотря на разный регистр, тоже палиндром
-palindrome('ДовОд'); // true
+isPalindrome('ДовОд'); // true
 // Это не палиндром
-palindrome('Кекс'); // false
-palindrome('Лёша на полке клопа нашёл '); // true
+isPalindrome('Кекс'); // false
+isPalindrome('Лёша на полке клопа нашёл '); // true
