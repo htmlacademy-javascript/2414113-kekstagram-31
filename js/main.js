@@ -1,3 +1,1 @@
-import { arrayPhotos } from './data.js';
-arrayPhotos();
-// console.log(arrayPhotos());
+import './thumbnails.js';
